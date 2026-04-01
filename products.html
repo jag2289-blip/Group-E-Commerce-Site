@@ -1,198 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Shop - Products</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
 
-    nav {
-      background-color: #333;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 40px;
-      color: #333;
-    }
-
-    p {
-      text-align: center;
-      color: #555;
-    }
-
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px;
-    }
-
-    .product-card {
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 20px;
-      width: 200px;
-      text-align: center;
-    }
-
-    .product-card h3 {
-      color: #333;
-      margin-bottom: 8px;
-    }
-
-    .product-card p {
-      color: #777;
-      font-size: 14px;
-      text-align: left;
-    }
-
-    .product-card .price {
-      font-size: 20px;
-      color: #333;
-      font-weight: bold;
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    .product-card button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      cursor: pointer;
-      width: 100%;
-      font-size: 14px;
-    }
-
-    .product-card button:hover {
-      background-color: #555;
-    }
-
-    /* Small message that shows when you add to cart */
-    #cart-message {
-      display: none;
-      text-align: center;
-      background-color: #ddd;
-      padding: 10px;
-      margin: 10px auto;
-      width: 300px;
-      border: 1px solid #ccc;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 0 8px;
-    }
-  </style>
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">My Shop</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a href="cart.html" id="cart-count" class="cart-badge">Cart: 0</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
-  <h1>Our Products</h1>
-  <p>Browse our collection below.</p>
+  <div class="container py-5">
+    <h1 class="page-title text-center">Our Products</h1>
+    <p class="page-subtitle text-center">Browse our collection below.</p>
 
-  <!-- Cart message (hidden until button is clicked) -->
-  <div id="cart-message">Item added to cart!</div>
+    <div id="cart-message">Item added to cart!</div>
 
-  <!-- Product cards -->
-  <div class="product-grid">
+    <div class="row g-4 mt-1">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$18.99</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
 
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$18.99</div>
-      <button onclick="addToCart('Placeholder')">Add to Cart</button>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$49.99</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder1')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$29.99</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder2')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$22.00</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder3')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$79.99</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder4')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card product-card p-3 text-center">
+          <div class="card-body">
+            <h3>Placeholder</h3>
+            <p>Someting to go here</p>
+            <div class="price">$14.99</div>
+            <button class="cart-btn" onclick="addToCart('Placeholder5')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$49.99</div>
-      <button onclick="addToCart('Placeholder1')">Add to Cart</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$29.99</div>
-      <button onclick="addToCart('Placeholder2')">Add to Cart</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$22.00</div>
-      <button onclick="addToCart('Placeholder3')">Add to Cart</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$79.99</div>
-      <button onclick="addToCart('Placeholder4')">Add to Cart</button>
-    </div>
-
-    <div class="product-card">
-      <h3>Placeholder</h3>
-      <p>Someting to go here</p>
-      <div class="price">$14.99</div>
-      <button onclick="addToCart('Placeholder5')">Add to Cart</button>
-    </div>
-
   </div>
 
-  <!-- Footer -->
-  <footer>
+  <footer class="text-center py-4 mt-4">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
-    <br><br>
-    <p>2026 My Shop. All rights reserved.</p>
+    <div class="mt-3">
+      <p class="mb-0">2026 My Shop. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    function addToCart(name) {
-      var message = document.getElementById("cart-message");
-      message.textContent = name + " has been added to your cart!";
-      message.style.display = "block";
-    }
-  </script>
-
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
