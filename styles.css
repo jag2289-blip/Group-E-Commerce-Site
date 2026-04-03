@@ -412,3 +412,9 @@ footer a {
     text-align: left;
   }
 }
+
+img
+{
+  height: auto;
+  width: 150px;
+}

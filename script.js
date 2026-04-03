@@ -65,12 +65,12 @@ function saveCartItems(cart) {
 
 function getProductPrice(name) {
   const prices = {
-    "Placeholder": 18.99,
-    "Placeholder1": 49.99,
-    "Placeholder2": 29.99,
-    "Placeholder3": 22.00,
-    "Placeholder4": 79.99,
-    "Placeholder5": 14.99
+    "Gallon of Gas": 18.99,
+    "Bucket of Tadpoles": 49.99,
+    "Piece of the Artimis II": 29.99,
+    "Coffee beans of some sort": 22.00,
+    "Diamond Pickaxe": 79.99,
+    "Farmers Almanac": 14.99
   };
 
   return prices[name] || 0;
