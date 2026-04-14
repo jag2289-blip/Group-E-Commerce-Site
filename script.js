@@ -65,11 +65,11 @@ function saveCartItems(cart) {
 
 function getProductPrice(name) {
   const prices = {
-    "Gallon of Gas": 18.99,
-    "Bucket of Tadpoles": 49.99,
-    "Piece of the Artimis II": 29.99,
+    "Gallon of Gas": 8.99,
+    "Bucket of Tadpoles": 39.99,
+    "Piece of the Artimis II": 2999.99,
     "Coffee beans of some sort": 22.00,
-    "Diamond Pickaxe": 79.99,
+    "Diamond Pickaxe": 799.99,
     "Farmers Almanac": 14.99
   };
 
